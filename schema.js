@@ -50,7 +50,7 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     launches: {
       type: new GraphQLList(LaunchType),
-      async resolve(parent, args) {
+      async resolve(parentVal, args) {
         const { data } = await axios.get(
           'https://api.spacexdata.com/v3/launches'
         );
@@ -65,7 +65,7 @@ const RootQuery = new GraphQLObjectType({
           type: GraphQLInt,
         },
       },
-      async resolve(parent, args) {
+      async resolve(parentVal, args) {
         const { data } = await axios.get(
           `https://api.spacexdata.com/v3/launches/${args.flight_number}`
         );
@@ -75,7 +75,7 @@ const RootQuery = new GraphQLObjectType({
     },
     rockets: {
       type: new GraphQLList(RocketType),
-      async resolve(parent, args) {
+      async resolve(parentVal, args) {
         const { data } = await axios.get(
           'https://api.spacexdata.com/v3/rockets'
         );
@@ -90,7 +90,7 @@ const RootQuery = new GraphQLObjectType({
           type: GraphQLString,
         },
       },
-      async resolve(parent, args) {
+      async resolve(parentVal, args) {
         const { data } = await axios.get(
           `https://api.spacexdata.com/v3/rockets/${args.rocket_id}`
         );
