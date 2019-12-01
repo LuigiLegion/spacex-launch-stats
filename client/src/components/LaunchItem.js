@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
 import classNames from 'classnames';
 
@@ -33,9 +34,9 @@ const LaunchItem = ({ launch }) => {
           </p>
         </div>
         <div className="col-md-3">
-          <button type="button" className="btn btn-secondary">
+          <Link to={`/launch/${flight_number}`} className="btn btn-secondary">
             Launch Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>
