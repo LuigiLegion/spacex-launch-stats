@@ -1,6 +1,8 @@
 import React from 'react';
 
 const MissionKey = props => {
+  // console.log('props in MissionKey: ', props);
+
   return (
     <div className="my-3">
       <p>

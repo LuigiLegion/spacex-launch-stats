@@ -1,6 +1,6 @@
 import React from 'react';
-import classNames from 'classnames';
 import Moment from 'react-moment';
+import classNames from 'classnames';
 
 const LaunchItem = ({ launch }) => {
   // console.log('launch in LaunchItem: ', launch);
