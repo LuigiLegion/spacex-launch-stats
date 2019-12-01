@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
 
 import Launches from './components/Launches';
 import Launch from './components/Launch';
@@ -20,7 +20,7 @@ function App() {
           <img src={logo} alt="SpaceX" className="logo" />
 
           <Route exact path="/" component={Launches} />
-          <Route exact path="/launches/:flight_number" component={Launches} />
+          <Route exact path="/launch/:flight_number" component={Launch} />
         </div>
       </Router>
     </ApolloProvider>
